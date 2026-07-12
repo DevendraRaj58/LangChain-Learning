@@ -21,14 +21,13 @@ model = ChatGroq(
 
 parser = StrOutputParser()
 
-chain = RunnableSequence(
-    prompt1,model,parser
-)
+chain = prompt1 |model | parser
+
 
 
 
 branched_chain = RunnableBranch(
-    (lambda x:len(x.split()) > 200,RunnableSequence(prompt2,model,parser)),
+    (lambda x:len(x.split()) > 200, prompt2 | model | parser),
     RunnablePassthrough()
 )
 

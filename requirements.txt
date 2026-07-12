@@ -2,10 +2,11 @@
 langchain
 langchain-core
 langchain_groq
+langchain-community
 # OpenAI Integration
 langchain-openai
 openai
-
+pypdf
 # Anthropic Integration
 langchain-anthropic
 
@@ -26,3 +27,5 @@ numpy
 scikit-learn
 streamlit
 
+# beautiful soup
+bs4
